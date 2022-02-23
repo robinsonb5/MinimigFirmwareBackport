@@ -14,3 +14,6 @@ used as an Amiga drive, and allowing the FAT partition to be accessed with
 FAT95.  (Note: these features have all received upstream bugfixes in the
 intervening years, which are not currently present here.)
 
+Includes a couple of build fixes to make it compile cleanly with the
+arm-none-eabi-gcc in Ubuntu's repos - but not tested.
+

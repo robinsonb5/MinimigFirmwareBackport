@@ -18,6 +18,10 @@
 #include "swi.h"
 #include "AT91SAM7S256.h"
 
+#ifndef _PARAMS
+#define _PARAMS(paramlist)		paramlist
+#endif
+
 /* Forward prototypes.  */
 int     _system     _PARAMS ((const char *));
 int     _rename     _PARAMS ((const char *, const char *));
@@ -59,7 +63,7 @@ register char * stack_ptr asm ("sp");
 
 
 /* following is copied from libc/stdio/local.h to check std streams */
-extern void   _EXFUN(__sinit,(struct _reent *));
+extern void   __sinit(struct _reent *);
 #define CHECK_INIT(ptr) \
   do						\
     {						\
