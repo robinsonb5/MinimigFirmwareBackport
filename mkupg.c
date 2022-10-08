@@ -89,7 +89,7 @@ int main(int argc, char **argv) {
   size = ftell(inf);
   fseek(inf, 0, SEEK_SET);
 
-  unsigned char *bin = malloc(sizeof(size));
+  unsigned char *bin = malloc(size);
   if(fread(bin, 1, size, inf) != size) {
     printf("Read error on %s\n", argv[1]);
     return -1;
